@@ -27,7 +27,7 @@ window._ = _
 Vue.config.productionTip = false
 Vue.filter('float', FloatFilter)
 Vue.use(VueHead)
-Vue.component('simple-loader', SimpleLoader)
+Vue.component('app-simple-loader', SimpleLoader)
 
 /* eslint-disable no-new */
 new Vue({
