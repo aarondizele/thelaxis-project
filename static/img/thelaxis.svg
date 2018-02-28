@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="24px" viewBox="0 0 21 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>liquify</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M10.5,24 C4.70101013,24 0,19.3393904 0,13.5902372 C0,9.83706445 3.35613872,5.35625061 10.0684161,0.147795682 C10.3223919,-0.049279174 10.6776072,-0.0492791759 10.9315829,0.147795678 L10.9315832,0.147795213 C17.6438611,5.35625034 21,9.83706433 21,13.5902372 C21,19.3393904 16.2989899,24 10.5,24 Z M10.5,20 C14.0567138,20 16.94,17.1008631 16.94,13.5245965 C16.94,11.2444937 14.9766569,8.53267013 11.0499707,5.38912581 L11.0499746,5.38912102 C10.7284923,5.13175547 10.2715177,5.13175542 9.9500354,5.38912091 C6.02334513,8.53266732 4.06,11.2444925 4.06,13.5245965 C4.06,17.1008631 6.94328621,20 10.5,20 Z" id="path-1"></path>
+    </defs>
+    <g id="liquify" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-2" transform="translate(-72.000000, -98.000000)">
+            <g id="liquify" transform="translate(72.000000, 98.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Combined-Shape" fill="#00FFA3" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

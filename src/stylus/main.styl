@@ -1,0 +1,84 @@
+$button-text-transform := none
+// Material Design Icons
+@import '../../static/material-icons/material-icons.css'
+// Font Awesome
+@import '../../static/font-awesome/css/font-awesome.min.css'
+// Vuetify
+@import '~vuetify/src/stylus/main'
+// Others 
+.card 
+  -webkit-box-shadow: 0 2px 10px 0 rgba(0,0,0,.05)
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,.05)
+
+.card--flex-toolbar 
+  margin-top: -32px;
+  width: 70%;
+
+._transparent 
+  background-color: rgba(0, 0, 0, .4)
+  
+.btn 
+  font-size: 16px!important
+
+._footer 
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+
+._title 
+  font-size: 20px !important
+  line-height: 22px !important
+
+// Custom General Classes
+.display-flex 
+  display: flex
+
+.column 
+  flex-direction: column
+
+.row 
+  flex-direction: row
+
+.wrap 
+  flex-wrap: wrap
+
+.align-items-center 
+  align-items: center
+
+.justify-content-start 
+  justify-content: flex-start
+
+.text-uppercase 
+  text-transform: uppercase !important
+
+.text-truncate 
+  text-overflow: ellipsis
+
+.text-lowercase 
+  text-transform: lowercase
+
+.pointer 
+  cursor: pointer
+
+.font-weight-light 
+  font-weight: 400 !important
+
+.font-weight-lighter 
+  font-weight: 300 !important
+
+.font-weight-bold 
+  font-weight: 500 !important
+
+.font-weight-bolder 
+  font-weight: 700 !important
+
+// 
+// 
+@media only screen and (max-width: 767px) 
+  .card--flex-toolbar 
+    width: 90%
+  
+  ._footer 
+    flex-flow: column wrap
+    align-items: center
+  
