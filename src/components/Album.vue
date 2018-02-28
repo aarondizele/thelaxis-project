@@ -31,7 +31,40 @@
                     </div>
                 </v-card-actions>
             </v-card>
-            <h2 class="headline font-weight-lighter muted--text mt-4"><strong>Comments</strong></h2>
+            <v-subheader class="headline font-weight-light my-3">Comments</v-subheader>
+            <v-card>
+                <v-card-title>
+                    <v-avatar size="40">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/06/64/e9/88/roma.jpg" alt="avatar">
+                    </v-avatar>
+                    <v-text-field
+                        name="input-1"
+                        label="Write a comment . . ."
+                        id="testing"
+                        solo
+                        flat
+                        auto-grow
+                        ></v-text-field>
+                </v-card-title>
+            </v-card>
+            <div class="my-4">
+                <v-card v-for="n in 5" :key="n" class="mb-3">
+                    <v-card-title class="muted--text">
+                        <div class="display-flex row wrap">
+                            <v-avatar size="40">
+                                <img src="https://media-cdn.tripadvisor.com/media/photo-s/06/64/e9/88/roma.jpg" alt="avatar">
+                            </v-avatar>
+                            <div class="ml-3">
+                                <div>Aaron Dizele</div>
+                                <div class="caption">Mar 12, 2018</div>
+                            </div>
+                        </div>
+                        <v-card-text>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga iste perferendis pariatur alias? Quos numquam dolor culpa fuga accusamus voluptas delectus consequuntur. Dolores omnis necessitatibus unde autem delectus eaque natus!
+                        </v-card-text>
+                    </v-card-title>
+                </v-card>
+            </div>
           </v-flex>
       </v-layout>
   </v-container>

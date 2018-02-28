@@ -27,7 +27,9 @@
       color="white"
     >
       <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-md-and-up"></v-toolbar-side-icon>
-      <v-toolbar-title v-text="title" class="font-weight-lighter"></v-toolbar-title>
+      <v-toolbar-title class="font-weight-lighter pointer">
+        <router-link to="/" tag="span">{{title}}</router-link>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn
         v-for="icon in icons"
