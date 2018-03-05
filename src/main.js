@@ -21,13 +21,17 @@ import _ from 'lodash'
 import VueHead from 'vue-head'
 import FloatFilter from './filters/float'
 import SimpleLoader from '@/components/static/SimpleLoader'
+import VueSimplemde from 'vue-simplemde'
+import markdownEditor from 'vue-simplemde/src/markdown-editor'
 
 
 window._ = _
 Vue.config.productionTip = false
 Vue.filter('float', FloatFilter)
 Vue.use(VueHead)
+Vue.use(VueSimplemde)
 Vue.component('app-simple-loader', SimpleLoader)
+Vue.component('markdown-editor', markdownEditor)
 
 /* eslint-disable no-new */
 new Vue({
@@ -58,9 +62,6 @@ new Vue({
     });
   },
   head: {
-    title: {
-      inner: 'Aaron-Laxis Dizele | Mon réseau social'
-    },
     meta: [
       { name: 'application-name', content: 'Aaron-Laxis Dizele' },
       { name: 'description', content: 'Personal social network website' }

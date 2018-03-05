@@ -1,6 +1,6 @@
-# ala-carte
+# thelaxis-web
 
-> A Vue.js project
+> Personal social network app
 
 ## Build Setup
 

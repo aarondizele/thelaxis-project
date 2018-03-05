@@ -1,64 +1,80 @@
 <template>
   <div>
-    <v-jumbotron
-      src="https://media-cdn.tripadvisor.com/media/photo-s/06/64/e9/88/roma.jpg"
-      :gradient="gradient"
-      dark
-      extendend
-    >
-      <v-container fluid fill-height>
-        <v-layout align-center justify-start>
-          <v-flex d-flex row>
-            <v-avatar size="120">
-              <img src="https://media-cdn.tripadvisor.com/media/photo-s/06/64/e9/88/roma.jpg" alt="avatar">
-            </v-avatar>
-            <div>
-              <h3 class="display-2">Aaron Dizele</h3>
-              <h4 class="headline font-weight-lighter mt-3 mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
-              <div class="subheading"><v-icon small class="mr-1">gps_fixed</v-icon> Kinshasa, RDC</div>
-              <div class="display-flex row wrap mt-4 title">
-                <v-btn large depressed dark class="_transparent font-weight-lighter"><strong class="pr-1">5</strong> Photos</v-btn>
-                <v-btn large depressed dark class="_transparent font-weight-lighter"><strong class="pr-1">12</strong> Vidéos</v-btn>
-                <v-btn large depressed dark class="_transparent font-weight-lighter"><strong class="pr-1">36</strong> Events</v-btn>
-                <v-btn large depressed dark class="_transparent font-weight-lighter"><strong class="pr-1">9</strong> Notes</v-btn>
+      <v-jumbotron
+        src="https://vuetifyjs.com/static/doc-images/parallax/material.jpg"
+        :gradient="gradient"
+        dark
+        extendend
+      >
+        <v-container fluid fill-height>
+          <v-layout align-center>
+            <v-flex>
+              <div class="display-flex row wrap align-items-start justify-content-center">
+                <v-avatar size="100">
+                  <img src="https://www.laxislist.com/static/img/profile.50e3add.jpg" class="my-avatar" alt="avatar">
+                </v-avatar>
+                <div class="ml-4">
+                  <h3 class="display-2">Aaron Dizele, Laxis</h3>
+                  <h4 class="headline font-weight-lighter mt-2 mb-1 display-flex author__quote">
+                    <v-icon color="" class="pr-2">check_circle</v-icon>  Software Developer, Graphic Designer, founder of LaxisList and thelaxis.co, Public Speaker.</h4>
+                  <div class="subheading display-flex"><v-icon small class="mr-1">gps_fixed</v-icon> Kinshasa, RDC</div>
+                  <div class="display-flex row wrap mt-4 title hidden-sm-and-down">
+                    <button class="my-btn font-weight-lighter"><strong class="pr-1">5</strong> Photos
+                    </button>
+                    <button class="my-btn font-weight-lighter"><strong class="pr-1">12</strong> Vidéos
+                    </button>
+                    <button class="my-btn font-weight-lighter"><strong class="pr-1">36</strong> Events
+                    </button>
+                    <button class="my-btn font-weight-lighter"><strong class="pr-1">9</strong> Notes
+                      </button>
+                  </div>
+                </div>
               </div>
-            </div>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </v-jumbotron>
-    <v-card class="card--flex-toolbar mx-auto elevation-5">
-      <v-toolbar card color="white">
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </v-jumbotron>
+    <v-card flat class="card--flex-toolbar mx-auto">
+      <v-toolbar flat card color="white">
         <v-tabs icons-and-text centered>
-          <v-tabs-slider color="blue"></v-tabs-slider>
+          <!-- <v-tabs-slider :color="colorTab"></v-tabs-slider> -->
+          <v-tabs-slider color="primary"></v-tabs-slider>
           <v-tab @click="changeComponent('app-timeline')" class="font-weight-light">
             Timeline
-            <v-icon>whatshot</v-icon>
+            <!-- <v-icon class="amber--text text--darken-1">whatshot</v-icon> -->
+            <v-icon color="primary">whatshot</v-icon>
           </v-tab>
           <v-tab @click="changeComponent('app-albums')" class="font-weight-light">
             Album
-            <v-icon>camera_alt</v-icon>
+            <!-- <v-icon class="green--text text--darken-3">camera_alt</v-icon> -->
+            <v-icon color="primary">camera_alt</v-icon>
           </v-tab>
           <v-tab @click="changeComponent('app-events')" class="font-weight-light">
             Events
-            <v-icon>insert_invitation</v-icon>
+            <!-- <v-icon class="red--text text--darken-4">insert_invitation</v-icon> -->
+            <v-icon color="primary">insert_invitation</v-icon>
           </v-tab>
           <v-tab @click="changeComponent('app-notes')" class="font-weight-light">
             Notes
-            <v-icon>insert_drive_file</v-icon>
+            <!-- <v-icon class="deep-purple--text text--darken-4">insert_drive_file</v-icon> -->
+            <v-icon color="primary">insert_drive_file</v-icon>
           </v-tab>
           <v-tab @click="changeComponent('app-about')" class="font-weight-light">
             About me
-            <v-icon>mood</v-icon>
+            <!-- <v-icon class="blue--text text--darken-4">mood</v-icon> -->
+            <v-icon color="primary">mood</v-icon>
           </v-tab>
         </v-tabs>
       </v-toolbar>
     </v-card>
-    <component :is="currentCmp"></component>
+    <v-slide-y-transition mode="out-in" appear-active-class>
+      <component :is="currentCmp"></component>
+    </v-slide-y-transition>
   </div>
-</template>
+</template>../assets/ny.jpg
 
 <script>
+import { mapGetters } from 'vuex'
 import AppTimeline from './Timeline'
 import AppAlbums from './Albums'
 import AppEvents from './Events'
@@ -68,29 +84,41 @@ import AppAbout from './About'
 export default {
   data: () => ({
     show: false,
-    gradient: 'to top right, rgba(63,81,181, .7), rgba(25,32,72, .7)',
-    currentCmp: 'AppTimeline'
+    // gradient: 'to top right, rgba(63,81,181, .7), rgba(25,32,72, .7)',
+    gradient: '258deg, rgba(52, 152, 219,.7), rgba(41, 128, 185,.7)',
+    // gradient: '258deg,#3b3d61,#4d4a78',
+    currentCmp: 'AppTimeline',
+    colorTab: 'amber'
   }),
+  computed: {
+    ...mapGetters(['extended'])
+  },
   methods: {
     changeComponent (value) {
       switch (value) {
         case 'app-timeline':
-          return this.currentCmp = 'AppTimeline'
+          this.colorTab = 'amber'
+          this.currentCmp = 'AppTimeline'
           break;      
         case 'app-albums':
-          return this.currentCmp = 'AppAlbums'
+          this.colorTab = 'green'
+          this.currentCmp = 'AppAlbums'
           break;      
         case 'app-events':
-          return this.currentCmp = 'AppEvents'
+          this.colorTab = 'red'
+          this.currentCmp = 'AppEvents'
           break;      
         case 'app-notes':
-          return this.currentCmp = 'AppNotes'
+          this.colorTab = 'deep-purple'
+          this.currentCmp = 'AppNotes'
           break;      
         case 'app-about':
-          return this.currentCmp = 'AppAbout'
+          this.colorTab = 'blue'
+          this.currentCmp = 'AppAbout'
           break;      
         default:
-          return this.currentCmp = 'AppTimeline'
+          this.colorTab = 'amber'
+          this.currentCmp = 'AppTimeline'
           break;
       }
     },
@@ -109,6 +137,8 @@ export default {
     AppAlbums,
     AppEvents,
     AppNotes
+  },
+  created () {
   }
 }
 </script>
